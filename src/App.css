@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #0e0e0e;
 }
 
-.App-link {
-  color: #61dafb;
+.CashBook {
+  width: 394px;
+  height: 750px;
+  position: relative;
+  background-color: #1e1f21;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Header */
+
+.header {
+  width: 100%;
+  height: 60px;
+  background-color: #435cc3;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addbook {
+  display: flex;
+  align-items: center
+}
+
+.addbook_icon {
+  color: #fff;
+  font-size: 22px;
+}
+
+.addbook span {
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: 500;
+  margin: 0 11px;
+}
+
+.addbook_icon_down {
+  color: #fff;
+  font-size: 16px;
+}
+
+.options {
+  list-style: none;
+}
+
+.options li {
+  float: left;
+  margin-left: 15px;
+}
+
+.options li>svg {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Search bar */
+
+.search-bar {
+  width: 100%;
+  height: 40px;
+  background-color: #191919;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.search-bar button {
+  background-color: transparent;
+  border: none;
+}
+
+.search-bar button svg {
+  color: #dddddd;
+  font-size: 22px;
+}
+
+.search-bar input {
+  height: 40px;
+  width: 90%;
+  background-color: transparent;
+  border: none;
+  color: #dddddd;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-left: 10px;
+}
+
+.search-bar input:active, input:focus {
+  outline: none
+}
+
+.search-bar input::placeholder {
+  color: #dddddd;
 }
