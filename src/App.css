@@ -18,7 +18,11 @@ body {
   background-color: #1e1f21;
 }
 
+/*****************************/
+
 /* Header */
+
+/*****************************/
 
 .header {
   width: 100%;
@@ -67,7 +71,11 @@ body {
   cursor: pointer;
 }
 
+/*****************************/
+
 /* Search bar */
+
+/*****************************/
 
 .search-bar {
   width: 100%;
@@ -107,4 +115,96 @@ body {
 
 .search-bar input::placeholder {
   color: #dddddd;
+}
+
+/*****************************/
+
+/* ContentHeader */
+
+/*****************************/
+
+.content-header {
+  padding: 20px 20px 0
+}
+
+.content_top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters, .data_sort {
+  height: 40px;
+  background-color: #191919;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.data_sort {
+  width: 68%
+}
+
+.filters {
+  width: 27%;
+}
+
+.content_top_icon {
+  font-size: 22px;
+  margin-right: 11px;
+  color: #435cc3;
+  cursor: pointer;
+}
+
+.content_top_title {
+  color: #dddddd;
+  font-family: sans-serif;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+/*****************************/
+
+/* TotalBalance */
+
+/*****************************/
+
+.totalBalance_section {
+  padding: 20px;
+}
+
+.totalBalance {
+  width: 100%;
+  height: 120px;
+  background-color: #191919;
+  border-radius: 5px;
+}
+
+.totalBalance_top, .totalBalance_middle, .totalBalance_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  height: 40px;
+}
+
+.totalBalance_top {
+  color: #dddddd;
+  font-family: sans-serif;
+  font-weight: 600;
+  border-bottom: 1px solid #1e1f21;
+}
+
+.totalBalance_middle, .totalBalance_bottom {
+  color: #dddddd;
+  font-family: sans-serif;
+}
+
+.totalBalance_middle span {
+  color: #007c58;
+}
+
+.totalBalance_bottom span {
+  color: #b93737
 }
