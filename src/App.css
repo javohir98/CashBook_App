@@ -196,17 +196,39 @@ body {
   border-bottom: 1px solid #1e1f21;
 }
 
+.cost_format {
+  text-align: right;
+  background: none;
+  border: none;
+  color: #ddd;
+  font-weight: bold!important;
+}
+
 .totalBalance_middle, .totalBalance_bottom {
   color: #dddddd;
   font-family: sans-serif;
 }
 
-.totalBalance_middle span {
+.totalBalance_middle span input {
   color: #007c58;
 }
 
-.totalBalance_bottom span {
+.totalBalance_bottom span input {
   color: #b93737
+}
+
+/*****************************/
+
+/* Date section */
+
+/*****************************/
+
+.date {
+  padding: 0 20px 20px;
+  color: #ddddddb9;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: bold;
 }
 
 /*****************************/
@@ -252,4 +274,18 @@ body {
 .btn svg {
   margin-right: 10px;
   font-weight: bold;
+}
+
+/*****************************/
+
+/* Cash Book Items */
+
+/*****************************/
+
+.cash_book_container {}
+
+.cash_book {
+  width: 100%;
+  background-color: #191919;
+  padding: 10px 20px;
 }
