@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import './App.css'
+import BtnContainer from './components/BtnContainer'
 import ContentHeader from './components/ContentHeader'
 import Date from './components/Date'
 import Header from './components/Header'
@@ -23,6 +24,7 @@ function App() {
       <ContentHeader />
       <TotalBalance />
       <Date />
+      <BtnContainer />
     </div>
   )
 }

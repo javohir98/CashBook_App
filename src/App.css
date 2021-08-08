@@ -208,3 +208,48 @@ body {
 .totalBalance_bottom span {
   color: #b93737
 }
+
+/*****************************/
+
+/* Btn Container */
+
+/*****************************/
+
+.btn-container {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  background-color: #191919;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 47.5%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: sans-serif;
+  color: #dddddd;
+}
+
+.cash-in {
+  background-color: #007c58;
+}
+
+.cash-out {
+  background-color: #b93737;
+}
+
+.btn svg {
+  margin-right: 10px;
+  font-weight: bold;
+}
