@@ -1,15 +1,19 @@
 import React from 'react'
 import Date from './Date'
+import CashBook from './CashBook';
 
 const  CashBookContainer = () => {
     return (
         <div className='cash_book_container'>
             <Date />
-            <div className="cash_book">
-                Test
-            </div>
+            <CashBook />
+            <CashBook />
+            <CashBook />
+            <CashBook />
+            <CashBook />
+            
         </div>
     )
 }
 
-export default CashBookContainer
+export default CashBookContainer 

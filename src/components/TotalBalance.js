@@ -1,11 +1,12 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React from 'react';
+import { useSelector } from 'react-redux';
 import NumberFormat from 'react-number-format';
 
 const TotalBalance = () => {
     const total = useSelector(state => state.count.totalBalance)
     const totalIn = useSelector(state => state.count.totalIn)
     const totalOut = useSelector(state => state.count.totalOut)
+    
     return (
         <div className='totalBalance_section'>
             <div className="totalBalance">

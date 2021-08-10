@@ -1,0 +1,29 @@
+[33mcommit ba3224a5b9a7699317be70515d6a90d005344bd4[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: javohir98 <jerkinov072@gmail.com>
+Date:   Sun Aug 8 19:31:09 2021 +0500
+
+    number format and change redux
+
+[33mcommit 557ae24b827864044a198a7227dc872df3e2878d[m
+Author: javohir98 <jerkinov072@gmail.com>
+Date:   Sun Aug 8 14:54:28 2021 +0500
+
+    Btn Container
+
+[33mcommit f4c78fb25bf62f87c2d6b5ee64176d9ed2338c7c[m
+Author: javohir98 <jerkinov072@gmail.com>
+Date:   Sat Aug 7 16:06:53 2021 +0500
+
+    redux
+
+[33mcommit 6360393ebeb2d9193533b4d05cea20c372f21daa[m
+Author: javohir98 <jerkinov072@gmail.com>
+Date:   Fri Jul 30 11:01:48 2021 +0500
+
+    Header and Search bar
+
+[33mcommit d6da0cdd7b6804ab6b7396b8e4db8228c3174c47[m
+Author: javohir98 <jerkinov072@gmail.com>
+Date:   Thu Jul 29 22:03:21 2021 +0500
+
+    Initialize project using Create React App
