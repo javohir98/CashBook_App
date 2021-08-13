@@ -1,18 +1,15 @@
 import React from 'react'
 import { BiPlus, BiMinus } from 'react-icons/bi'
-import { useDispatch } from 'react-redux'
-import { setCashIn, setCashOut } from '../redux/actions/CashBookActions'
 
-const BtnContainer = () => {
-    const dispatch = useDispatch()
+const BtnContainer = ({ handleClick }) => {
 
     return (
         <div className='btn-container'>
-            <button className='btn cash-in' onClick={() => dispatch(setCashIn(45))}>
+            <button className='btn cash-in' onClick={handleClick}>
                 <BiPlus />
                 Cash In
             </button>
-            <button className='btn cash-out' onClick={() => dispatch(setCashOut(45))}>
+            <button className='btn cash-out' onClick={handleClick}>
                 <BiMinus />
                 Cash Out
             </button>

@@ -8,10 +8,7 @@ const  CashBookContainer = () => {
             <Date />
             <CashBook />
             <CashBook />
-            <CashBook />
-            <CashBook />
-            <CashBook />
-            
+            <CashBook />          
         </div>
     )
 }
