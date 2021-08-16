@@ -283,7 +283,10 @@ body {
 
 /*****************************/
 
-.cash_book_container {}
+.cash_book_container {
+  height: 350px;
+  overflow-y: scroll!important;
+}
 
 .cash_book {
   width: 100%;
@@ -464,3 +467,4 @@ body {
   letter-spacing: 1px;
   cursor: pointer
 }
+

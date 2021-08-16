@@ -1,10 +1,31 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { HiArrowLeft } from 'react-icons/hi'
 import { RiCalendar2Fill } from 'react-icons/ri'
 import { FiClock } from 'react-icons/fi'
 import { MdPhotoCamera } from 'react-icons/md'
+import { useDispatch, useSelector } from 'react-redux'
+import { setCashIn, setCashOut } from '../redux/actions/CashBookActions'
 
 const AddCash = ({ toggle, toggleClick }) => {
+    const state = useSelector(state => state.count.addItem)
+    const dispatch = useDispatch()
+
+    // useEffect(() => {
+
+    //     const interval = setInterval(() => {
+    //         dispatch(setCashOut(45))
+    //         dispatch(setCashIn(500))
+    //     }, 5000)
+
+    //     return () => {
+    //         clearInterval(interval)
+    //     }
+    // })
+
+    const handleSave = () => {
+        toggleClick()
+    }
+
     const current = new Date();
     const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
     const hour = `${current.getHours()}:${current.getMinutes()}`
@@ -34,7 +55,7 @@ const AddCash = ({ toggle, toggleClick }) => {
                 </div>
             </div>
             <div className="save">
-                <button>Save</button>
+                <button onClick={handleSave}>Save</button>
             </div>
         </div>
     )
