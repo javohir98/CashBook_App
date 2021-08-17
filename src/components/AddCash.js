@@ -26,7 +26,7 @@ const AddCash = ({ toggle, toggleClick }) => {
 
     const current = new Date();
     const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
-    const hour = `${current.getHours()}:${current.getMinutes()}`
+    const hour = `${current.getHours()}:${current.getMinutes() < 10 ? `0${current.getMinutes()}`: current.getMinutes()}`
   
     return (
         <div className={toggle ? "add_cash active" : "add_cash"} >
