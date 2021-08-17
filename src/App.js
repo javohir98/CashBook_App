@@ -9,7 +9,7 @@ import Search from './components/Search'
 import TotalBalance from './components/TotalBalance'
 
 function App() {
-  const [toggle, setToggle] = useState(true)
+  const [toggle, setToggle] = useState(false)
 
   const handleClick = () => {
       setToggle(!toggle)
