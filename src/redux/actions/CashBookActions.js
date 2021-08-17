@@ -13,3 +13,10 @@ export const setCashOut = (event) => {
         payload: event
     }
 }
+
+export const setType = (event) => {
+    return {
+        type: ActionTypes.ADD_TYPE,
+        payload: event
+    }
+}

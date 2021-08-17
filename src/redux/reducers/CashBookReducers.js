@@ -1,26 +1,52 @@
 import { ActionTypes } from "../constants/action-types";
 
 const initialState = {
-    totalBalance: 1500000,
-    totalIn: 450000,
-    totalOut: 128000,
+    totalBalance: 0,
+    totalIn: 0,
+    totalOut: 0,
     addItem: []
 }
 
 export const addCash = (state = initialState, {type, payload}) => {
+    const current = new Date();
     switch (type) {
         case ActionTypes.CASH_IN:
             return { 
                 ...state, 
-                totalBalance: state.totalBalance + payload, totalIn: state.totalIn + payload,
-                addItem: [...state.addItem,{id: Date.now(), amount: payload, remark: 'Test', type: 'in'}]
+                totalBalance: state.totalBalance + parseInt(payload.number), totalIn: state.totalIn + parseInt(payload.number),
+                addItem: [...state.addItem,
+                    {
+                        id: Date.now(), 
+                        amount: parseInt(payload.number), 
+                        remark: payload.remark, 
+                        addHour: `${current.getHours()}:${current.getMinutes()}`, 
+                        balance: state.totalBalance + parseInt(payload.number),
+                        type: 'in'
+                    }]
             }
         case ActionTypes.CASH_OUT:
             return { 
-                ...state, totalBalance: state.totalBalance - payload, 
-                totalOut: state.totalOut + payload,
-                addItem: [...state.addItem,{id: Date.now(), amount: payload, remark: 'Test', type: 'out'}]
+                ...state, totalBalance: state.totalBalance - parseInt(payload.number), 
+                totalOut: state.totalOut + parseInt(payload.number),
+                addItem: [...state.addItem,
+                    {
+                        id: Date.now(), 
+                        amount: parseInt(payload.number), 
+                        remark: payload.remark, 
+                        addHour: `${current.getHours()}:${current.getMinutes()}`, 
+                        balance: state.totalBalance - parseInt(payload.number), 
+                        type: 'out'
+                    }]
             }
+        default:
+            return state
+    }
+}
+
+export const addType = (state = '', {type, payload}) => {
+    switch (type) {
+        case ActionTypes.ADD_TYPE:
+            return state = payload
         default:
             return state
     }

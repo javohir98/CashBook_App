@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
-import { addCash } from './CashBookReducers'
+import { addCash, addType } from './CashBookReducers'
 
 const reducers = combineReducers({
     count: addCash,
+    type: addType
 });
 
 export default reducers

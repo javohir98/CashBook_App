@@ -11,7 +11,13 @@ const  CashBookContainer = () => {
             <Date />     
             {state.map((item) => {
                 return (
-                    <CashBook amount={item.amount} type={item.type} remark={item.remark} />
+                    <CashBook 
+                        amount={item.amount} 
+                        type={item.type} 
+                        remark={item.remark} 
+                        clock={item.addHour}
+                        balance={item.balance}
+                        key={item.id} />
                 )
             })}   
         </div>
