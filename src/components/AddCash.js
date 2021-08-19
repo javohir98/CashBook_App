@@ -14,19 +14,25 @@ const AddCash = ({ toggle, toggleClick }) => {
 
     const handleSave = (e) => {
         e.preventDefault();
-        if (type === "in") {
-            dispatch(setCashIn({number,remark}))
-        } else if (type === 'out') {
-            dispatch(setCashOut({number,remark}))
+
+        if (number && remark) {
+            if (type === "in") {
+                dispatch(setCashIn({number,remark}))
+            } else if (type === 'out') {
+                dispatch(setCashOut({number,remark}))
+            }
+            toggleClick();
+            setNumber('')
+            setRemark('')
+        } else {
+            alert("Please fill the field")
         }
-        toggleClick();
-        setNumber('')
-        setRemark('')
+       
     }
 
     const current = new Date();
     const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
-    const hour = `${current.getHours()}:${current.getMinutes()}`
+    const hour = `${current.getHours()}:${current.getMinutes() < 10 ? `0${current.getMinutes()}`: current.getMinutes()}`
   
     return (
         <div className={toggle ? "add_cash active" : "add_cash"} >

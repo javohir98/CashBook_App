@@ -19,7 +19,7 @@ export const addCash = (state = initialState, {type, payload}) => {
                         id: Date.now(), 
                         amount: parseInt(payload.number), 
                         remark: payload.remark, 
-                        addHour: `${current.getHours()}:${current.getMinutes()}`, 
+                        addHour: `${current.getHours()}:${current.getMinutes() < 10 ? `0${current.getMinutes()}`: current.getMinutes()}`, 
                         balance: state.totalBalance + parseInt(payload.number),
                         type: 'in'
                     }]
@@ -33,7 +33,7 @@ export const addCash = (state = initialState, {type, payload}) => {
                         id: Date.now(), 
                         amount: parseInt(payload.number), 
                         remark: payload.remark, 
-                        addHour: `${current.getHours()}:${current.getMinutes()}`, 
+                        addHour: `${current.getHours()}:${current.getMinutes() < 10 ? `0${current.getMinutes()}`: current.getMinutes()}`, 
                         balance: state.totalBalance - parseInt(payload.number), 
                         type: 'out'
                     }]
