@@ -14,14 +14,20 @@ const AddCash = ({ toggle, toggleClick }) => {
 
     const handleSave = (e) => {
         e.preventDefault();
-        if (type === "in") {
-            dispatch(setCashIn({number,remark}))
-        } else if (type === 'out') {
-            dispatch(setCashOut({number,remark}))
+
+        if (number && remark) {
+            if (type === "in") {
+                dispatch(setCashIn({number,remark}))
+            } else if (type === 'out') {
+                dispatch(setCashOut({number,remark}))
+            }
+            toggleClick();
+            setNumber('')
+            setRemark('')
+        } else {
+            alert("Please fill the field")
         }
-        toggleClick();
-        setNumber('')
-        setRemark('')
+       
     }
 
     const current = new Date();
