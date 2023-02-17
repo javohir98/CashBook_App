@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.css'
 import AddCash from './components/AddCash'
 import BtnContainer from './components/BtnContainer'
@@ -10,9 +10,19 @@ import TotalBalance from './components/TotalBalance'
 
 function App() {
   const [toggle, setToggle] = useState(false)
+  const tele = window.Telegram.WebApp;
 
   const handleClick = () => {
       setToggle(!toggle)
+  }
+
+  useEffect(() => {
+    tele.ready();
+    console.log(tele)
+  }, [])
+
+  const test = () => {
+    alert(tele.initData)
   }
 
   return (
@@ -21,6 +31,7 @@ function App() {
       <Search />
       <ContentHeader />
       <TotalBalance />
+      <button onClick={test}>test initData</button>
       <CashBookContainer />
       <BtnContainer handleClick={handleClick} />
       <AddCash toggle={toggle} toggleClick={handleClick} />
